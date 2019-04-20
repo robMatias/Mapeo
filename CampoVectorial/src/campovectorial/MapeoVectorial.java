@@ -1,9 +1,7 @@
 package campovectorial;
 
-import java.util.HashSet;
 import java.util.Scanner;
-import java.util.Set;
-
+import java.util.Random;
 /**
  *
  * @author Desarrollo
@@ -43,6 +41,51 @@ public class MapeoVectorial {
                 return respuesta;
             }
             System.out.println("Cumple con el 3° axioma");
+            
+            if ((vector.getX()+vector.getY())+(-vector.getX()-vector.getY()) != 0) {
+                respuesta = false;
+                System.out.println("No cumple con el 4° axioma");
+                return respuesta;
+            }
+            System.out.println("Cumple con el 4° axioma");
+            
+            int escalar = new Random().nextInt(100) + 1;
+            if ((vector.getX()*escalar <= 0) || (vector.getY()*escalar <= 0) ) {
+                respuesta = false;
+                System.out.println("No cumple con el 5° axioma");
+                return respuesta;
+            }
+            System.out.println("Cumple con el 5° axioma");
+            
+            if ((vector.getX() + vector.getY())*escalar != vector.getX()*escalar + vector.getY()*escalar) {
+                respuesta = false;
+                System.out.println("No cumple con el 6° axioma");
+                return respuesta;
+            }
+            System.out.println("Cumple con el 6° axioma");
+            
+            int escalar2 = new Random().nextInt(100) + 1;
+            if ((vector.getX()*escalar*escalar2 != vector.getX()*escalar*escalar2) || (vector.getY()*escalar*escalar2 != vector.getY()*escalar*escalar2)) {
+                respuesta = false;
+                System.out.println("No cumple con el 7° axioma");
+                return respuesta;
+            }
+            System.out.println("Cumple con el 7° axioma");
+            
+            if ((vector.getX()*escalar)*escalar2 != (vector.getX()*escalar2)*escalar || (vector.getY()*escalar)*escalar2 != (vector.getY()*escalar)*escalar2 ) {
+                respuesta = false;
+                System.out.println("No cumple con el 8° axioma");
+                return respuesta;
+            }
+            System.out.println("Cumple con el 8° axioma");
+            
+            if (vector.getX()*1 != vector.getX()*1 || vector.getY()*1 != vector.getY()*1) {
+                respuesta = false;
+                System.out.println("No cumple con el 9° axioma");
+                return respuesta;
+            }
+            System.out.println("Cumple con el 9° axioma");
+            
         }
         
         return respuesta;
