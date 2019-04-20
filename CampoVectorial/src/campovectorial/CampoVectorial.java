@@ -18,39 +18,44 @@ public class CampoVectorial {
      */
     public static void main(String[] args) 
     {
-        int x;
-        int y;
-        String o;
         
-        System.out.println("El vector pertenece a Num.Reales o Imaginarios");
-        Scanner sc2 = new Scanner(System.in);
-        o= sc2.nextLine();
-        System.out.println("Escribe el valor de x");
-        Scanner sc =new Scanner(System.in);
-        x= sc.nextInt();
+        MapeoVectorial mapeovectorial= new MapeoVectorial();
+        Vector vector = mapeovectorial.getVector();
+        boolean respuesta = mapeovectorial.isVectorValido(vector);
         
-        System.out.println("Escribe el valor de y");
-        Scanner sc1 =new Scanner(System.in);
-        y= sc.nextInt();
-        
-        System.out.println("Cumple con el 1° axioma");
-        
-        if (x+y == y+x)
-        System.out.println("cumple con el 2° axioma");
-        else 
-            System.out.println("No cumple con la ley asociativa de la suma");
-        
-        if (x+y+0==x+y)
-            System.out.println("cumple con el 3° axioma");
-        else
-            System.out.println("No exixte identico aditivo");
-        
-        if(x + y + (-x -y )==0) 
-            System.out.println("se cumple el 4° axioma");
-        else
-            System.out.println("No existe inverso aditivo");
-            
-        System.out.println("Hola Git");
+//        int x;
+//        int y;
+//        String o;
+//        
+//        System.out.println("El vector pertenece a Num.Reales o Imaginarios");
+//        Scanner sc2 = new Scanner(System.in);
+//        o= sc2.nextLine();
+//        System.out.println("Escribe el valor de x");
+//        Scanner sc =new Scanner(System.in);
+//        x= sc.nextInt();
+//        
+//        System.out.println("Escribe el valor de y");
+//        Scanner sc1 =new Scanner(System.in);
+//        y= sc1.nextInt();
+//        
+//        System.out.println("Cumple con el 1° axioma");
+//        
+//        if (x+y == y+x)
+//        System.out.println("cumple con el 2° axioma");
+//        else 
+//            System.out.println("No cumple con la ley asociativa de la suma");
+//        
+//        if (x+y+0==x+y)
+//            System.out.println("cumple con el 3° axioma");
+//        else
+//            System.out.println("No exixte identico aditivo");
+//        
+//        if(x + y + (-x -y )==0) 
+//            System.out.println("se cumple el 4° axioma");
+//        else
+//            System.out.println("No existe inverso aditivo");
+//            
+//        System.out.println("Hola Git");
    }
     
 }
